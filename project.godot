@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.4", "Mobile")
 [autoload]
 
 AuthService="*res://src/scripts/services/auth/authService.gd"
+SomeActionService="*res://src/scripts/services/someAction/someActionService.gd"
 Storage="*res://src/scripts/api/storage/storage.gd"
 CookieJar="*res://src/scripts/api/cookieJar/cookie_jar.gd"
 BaseApi="*res://src/scripts/api/base_api.gd"
@@ -39,3 +40,10 @@ project/assembly_name="godot-auth-example"
 [rendering]
 
 textures/vram_compression/import_etc2_astc=true
+
+[shader_globals]
+
+SERVER_URL={
+"type": "bool",
+"value": false
+}

@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://dugnceod5u25y"]
+
+[ext_resource type="Script" uid="uid://ci8ubn52lruwm" path="res://src/scripts/containers/lobby/Lobby.gd" id="1_xovft"]
+
+[node name="Lobby" type="Node2D"]
+script = ExtResource("1_xovft")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 186.0
+offset_bottom = 45.0
+text = "Welcome"
+
+[node name="logout_button" type="Button" parent="."]
+offset_left = 129.0
+offset_top = 176.0
+offset_right = 216.0
+offset_bottom = 215.0
+text = "logout"
+
+[node name="quit_button" type="Button" parent="."]
+offset_left = 129.0
+offset_top = 222.0
+offset_right = 217.0
+offset_bottom = 264.0
+text = "close app"
+
+[node name="authed_action_button" type="Button" parent="."]
+offset_left = 32.0
+offset_top = 67.0
+offset_right = 148.0
+offset_bottom = 98.0
+text = "authed action"
+
+[connection signal="pressed" from="logout_button" to="." method="_on_logout_button_pressed"]
+[connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="authed_action_button" to="." method="_on_authed_action_button_pressed"]

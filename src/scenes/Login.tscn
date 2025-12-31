@@ -37,6 +37,14 @@ offset_right = 256.0
 offset_bottom = 215.0
 text = "sign in"
 
+[node name="unauthed_action_button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = -66.0
+offset_right = 154.0
+offset_bottom = -28.0
+text = "unauthed action"
+
 [node name="sign_up_button" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 138.0
@@ -48,4 +56,5 @@ text = "sign up"
 [connection signal="text_changed" from="Control/username_input" to="." method="_on_username_input_text_changed"]
 [connection signal="text_changed" from="Control/password_input" to="." method="_on_password_input_text_changed"]
 [connection signal="pressed" from="Control/sign_in_button" to="." method="_on_sign_in_button_pressed"]
+[connection signal="pressed" from="Control/unauthed_action_button" to="." method="_on_unauthed_action_button_pressed"]
 [connection signal="pressed" from="Control/sign_up_button" to="." method="_on_sign_up_button_pressed"]

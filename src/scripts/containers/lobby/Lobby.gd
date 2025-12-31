@@ -6,23 +6,13 @@ func _ready():
 	print("WELCOME")
 
 
-func _on_button_pressed():
+func _on_logout_button_pressed() -> void:
 	await AuthService.logout()
 	SceneEvent.change_scene(SceneEvent.Scene_name.LOGIN)
 
+func _on_authed_action_button_pressed() -> void:
+	await SomeActionService.doSmth()
 
-func _on_button_2_pressed():
+func _on_quit_button_pressed() -> void:
 	get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
 	get_tree().quit()
-
-
-func _on_button_3_pressed() -> void:
-	print("did smth")
-
-
-func _on_button_4_pressed() -> void:
-	print("did smth else")
-
-
-func _on_button_5_pressed() -> void:
-	pass # Replace with function body.

@@ -1,6 +1,5 @@
 extends AwaitableHTTPRequest
 
-const SERVER_URL = "http://localhost:8082/api"
 const AUTH_ERROR_CODES = [401]
 
 func fetch(query: BaseQueryType) -> Dictionary:
@@ -52,7 +51,7 @@ func _baseQuery(query: BaseQueryType) -> HTTPResult:
 		)
 
 	var response := await async_request(
-		SERVER_URL + query.endpoint,
+		Constants.SERVER_URL + query.endpoint,
 		headers,
 		query.method,
 		payload,

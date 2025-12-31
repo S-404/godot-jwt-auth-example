@@ -39,3 +39,7 @@ func _on_sign_up_button_pressed() -> void:
 		"password": password
 	})
 	AuthStore.set_is_authed(res.get("is_status_ok"))
+
+
+func _on_unauthed_action_button_pressed() -> void:
+	await SomeActionService.doSmth()
