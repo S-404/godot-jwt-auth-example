@@ -1,0 +1,41 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="godot-auth-example"
+config/version="0.0.1"
+run/main_scene="res://Main.tscn"
+config/features=PackedStringArray("4.4", "Mobile")
+
+[autoload]
+
+AuthService="*res://src/scripts/services/auth/authService.gd"
+Storage="*res://src/scripts/api/storage/storage.gd"
+CookieJar="*res://src/scripts/api/cookieJar/cookie_jar.gd"
+BaseApi="*res://src/scripts/api/base_api.gd"
+ApiExceptionHandler="*res://src/scripts/exceptions/api_exception_handler.gd"
+AuthStore="*res://src/scripts/store/auth_store.gd"
+TokenEvent="*res://src/scripts/events/token_event.gd"
+SceneEvent="*res://src/scripts/events/scene_event.gd"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=800
+window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="godot-auth-example"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
